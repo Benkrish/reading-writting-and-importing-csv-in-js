@@ -4,7 +4,7 @@ const arr = [] //made an array to add the data
 const filePath = './industry.csv'
 
 fs.ReadStream(filePath) // creates a stream(smaller bytes data)
-  .pipe(pars()) // connect the output from strem and input from csv() which knows how to read and understand csv file
+  .pipe(pars()) // connect the output from strem and input from pars() which knows how to read and understand csv file
   .on('data', (data) => {
     // it's an event listener
     arr.push(data)
